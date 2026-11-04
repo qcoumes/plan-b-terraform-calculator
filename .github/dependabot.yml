@@ -14,6 +14,9 @@ updates:
       # Vitest 5 needs Node 22, local dev is on Node 20.
       - dependency-name: vitest
         versions: [">=5"]
+      # Types for the oldest supported Node (20).
+      - dependency-name: "@types/node"
+        update-types: [version-update:semver-major]
 
   - package-ecosystem: github-actions
     directories: [/, /.github/actions/*]
@@ -31,3 +34,6 @@ updates:
       # Node majors are bumped by hand, to the next LTS.
       - dependency-name: node
         update-types: [version-update:semver-major]
+      # Odd minor versions are nginx's mainline branch: stay on stable.
+      - dependency-name: nginxinc/nginx-unprivileged
+        versions: [">= 1.31, < 1.32", ">= 1.33, < 1.34", ">= 1.35, < 1.36"]
