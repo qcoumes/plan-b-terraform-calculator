@@ -2,7 +2,9 @@
 
 A production planner for Plan B: Terraform.
 
-## Running the app
+Use it online: **https://qcoumes.github.io/plan-b-terraform-calculator/**
+
+## Running the app locally
 
 Each release is published as a Docker image (the built site, served by nginx on port 8080):
 
