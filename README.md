@@ -2,7 +2,30 @@
 
 A production planner for Plan B: Terraform.
 
-## Running it
+## Running the app
+
+Each release is published as a Docker image (the built site, served by nginx on port 8080):
+
+```sh
+docker run --rm -p 8080:8080 ghcr.io/qcoumes/plan-b-terraform-calculator:latest
+```
+
+Then open http://127.0.0.1:8080.
+
+With Docker Compose, put this in a `compose.yaml` and run `docker compose up -d`:
+
+```yaml
+services:
+  calculator:
+    image: ghcr.io/qcoumes/plan-b-terraform-calculator:latest
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+```
+
+- Replace `latest` with a version (e.g. `1.0.0`) to stay on a given release.
+
+## Development
 
 You only need Docker with Compose:
 
