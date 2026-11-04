@@ -1,0 +1,30 @@
+{
+  "daysPerYear": 300,
+  "ui": {},
+  "items": {
+    "basalt": {"names": {"en": "Basalt"}, "group": "other", "icon": null},
+    "carbon": {"names": {"en": "Carbon"}, "group": "other", "icon": null},
+    "crystal": {"names": {"en": "Crystal"}, "group": "other", "icon": null},
+    "extractor": {"names": {"en": "Extractor"}, "group": "other", "icon": null},
+    "factory": {"names": {"en": "Factory"}, "group": "other", "icon": null},
+    "gadget": {"names": {"en": "Gadget"}, "group": "other", "icon": null},
+    "iron": {"names": {"en": "Iron"}, "group": "other", "icon": null},
+    "lab": {"names": {"en": "Lab"}, "group": "other", "icon": null},
+    "polymer": {"names": {"en": "Polymer"}, "group": "other", "icon": null},
+    "recycler": {"names": {"en": "Recycler"}, "group": "other", "icon": null},
+    "scrap": {"names": {"en": "Scrap"}, "group": "other", "icon": null},
+    "steel": {"names": {"en": "Steel", "fr": "Acier"}, "group": "other", "icon": null},
+    "sulfur": {"names": {"en": "Sulfur"}, "group": "other", "icon": null}
+  },
+  "recipes": [
+    {"id": 0, "building": "factory", "inputs": {"iron": 3}, "outputs": {"steel": 1}, "days": 10},
+    {"id": 1, "building": "factory", "inputs": {"basalt": 3}, "outputs": {"steel": 1}, "days": 10, "locked": true},
+    {"id": 2, "building": "factory", "inputs": {"carbon": 3}, "outputs": {"polymer": 2}, "days": 10},
+    {"id": 3, "building": "factory", "inputs": {"steel": 1, "polymer": 1}, "outputs": {"gadget": 1}, "days": 5},
+    {"id": 4, "building": "recycler", "inputs": {"scrap": 5}, "outputs": {"steel": 2, "polymer": 1}, "days": 20},
+    {"id": 5, "building": "lab", "inputs": {}, "outputs": {"crystal": 2}, "days": 100},
+    {"id": 6, "building": "extractor", "inputs": {}, "outputs": {"iron": 1}, "days": 20, "extraction": true},
+    {"id": 7, "building": "extractor", "inputs": {}, "outputs": {"iron": 1}, "days": 20, "extraction": true, "synthetic": true},
+    {"id": 8, "building": "extractor", "inputs": {}, "outputs": {"sulfur": 1}, "days": 20, "extraction": true, "synthetic": true}
+  ]
+}

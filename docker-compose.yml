@@ -1,0 +1,22 @@
+# docker compose up, then http://127.0.0.1:8765
+# Other commands: docker compose exec -u node app <command>
+# (without -u node they run as root and leave root-owned files behind)
+services:
+  app:
+    build: ./docker
+    image: plan-b-terraform-calculator-dev
+    env_file: ./docker/dev.env
+    ports:
+      # 127.0.0.1 only: saved settings belong to this origin.
+      - "127.0.0.1:8765:8765"
+    volumes:
+      - .:/app
+      # Hides the host's node_modules.
+      - node_modules:/app/node_modules
+      - yarn_cache:/home/node/.cache/yarn
+    # So Ctrl+C stops it right away.
+    init: true
+
+volumes:
+  node_modules:
+  yarn_cache:

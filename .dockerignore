@@ -1,0 +1,10 @@
+# For docker/Dockerfile.production (context: project root).
+node_modules
+dist
+coverage
+.git
+.github
+.idea
+.vscode
+.claude
+*.log

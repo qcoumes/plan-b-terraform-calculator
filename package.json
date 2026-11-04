@@ -1,0 +1,45 @@
+{
+  "name": "plan-b-terraform-calculator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production planner for Plan B: Terraform.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && eslint --max-warnings 0 . && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint --max-warnings 0 .",
+    "lint:fix": "eslint --fix .",
+    "test": "vitest run",
+    "verify": "vue-tsc --noEmit && eslint --max-warnings 0 . && vitest run",
+    "check-data": "tsx scripts/check_data.ts",
+    "center-icons": "tsx scripts/center_icons.ts"
+  },
+  "dependencies": {
+    "@dagrejs/dagre": "3.1.3",
+    "vue": "3.5.44"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "20.19.43",
+    "@vitejs/plugin-vue": "6.0.10",
+    "@vue/eslint-config-typescript": "14.9.0",
+    "eslint": "10.14.0",
+    "eslint-plugin-vue": "10.12.0",
+    "globals": "17.14.0",
+    "jiti": "2.7.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.1",
+    "vite": "8.3.5",
+    "vitest": "4.1.12",
+    "vue-eslint-parser": "10.4.1",
+    "vue-tsc": "3.3.14"
+  }
+}

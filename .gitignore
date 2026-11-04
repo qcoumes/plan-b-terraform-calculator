@@ -1,0 +1,62 @@
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Yarn
+.yarn/build-state.yml
+.yarn/cache/
+.yarn/install-state.gz
+.yarn/patches/
+.yarn/plugins/
+.yarn/releases/
+.yarn/sdks/
+.yarn/unplugged/
+.yarn/versions/
+.yarn/workspace/
+.yarnrc.yaml.bak
+.yarnrc.yml.bak
+
+# AI coding agents' instruction files (at any depth)
+CLAUDE.md
+CLAUDE.local.md
+.claude/**/*.md
+AGENTS.md
+AGENTS.override.md
+GEMINI.md
+QWEN.md
+WARP.md
+.github/copilot-instructions.md
+.github/instructions/
+.github/prompts/
+.github/agents/
+.cursorrules
+.cursor/rules/
+.windsurfrules
+.windsurf/rules/
+.clinerules
+.roo/
+.roorules
+.kiro/steering/
+.junie/guidelines.md
+CONVENTIONS.md
+.augment-guidelines
+.augment/rules/
