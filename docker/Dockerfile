@@ -1,6 +1,6 @@
 # Dev image. The code is mounted and node_modules is a volume (docker-compose.yml),
 # so this rarely needs rebuilding.
-FROM node:24.22.2-bookworm-slim
+FROM node:24.22.3-bookworm-slim
 
 # New volumes on these paths start with this ownership.
 RUN mkdir -p /app/node_modules /home/node/.cache/yarn \
